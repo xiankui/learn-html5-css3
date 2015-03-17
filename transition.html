@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/transition.css">
+</head>
+<body>
+	<header>
+		<h1>transtion：平滑地以动画效果改变CSS的属性值。</h1>
+	</header>
+	<article>
+		<h2>transition 简介</h2>
+		<h3>在CSS中创建简单的过渡效果可以从以下几个步骤来实现：</h3>
+		<ul>
+			<li>第一，在默认样式中声明元素的初始状态样式；</li>
+			<li>第二，声明过渡元素最终状态样式，比如悬浮状态；</li>
+			<li>第三，在默认样式中通过添加过渡函数，添加一些不同的样式。</li>
+		</ul>
+		<h3>CSS3的过度transition属性是一个复合属性，主要包括以下几个子属性：</h3>
+		<ul>
+			<li>transition-property:指定过渡或动态模拟的CSS属性</li>
+			<li>transition-duration:指定完成过渡所需的时间</li>
+			<li>transition-timing-function:指定过渡函数
+				<ul>
+					<li>ease: （默认值）速度由快到慢，逐渐变慢</li>
+					<li>linear: 速度恒定</li>
+					<li>ease-in: 速度越来越快，呈加速状态；常称为渐显效果</li>
+					<li>ease-out: 速度越来越慢，呈减速状态；常称为渐隐效果</li>
+					<li>ease-in-out: 先加速再减速；常称为渐显渐隐效果</li>
+				</ul>
+			</li>
+			<li>transition-delay:指定开始出现的延迟时间</li>
+		</ul>
+		<div class="demo-transition">
+			
+		</div>
+	</article>
+</body>
+</html>

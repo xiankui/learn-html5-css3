@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3 选择器</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/selector.css">
+</head>
+<body>
+	<header>
+		<h1>css3 选择器</h1>
+	</header>
+	<article>
+		<section>
+			<h2>:root</h2>
+			<p>
+				“:root”选择器等同于<html>元素，简单点说：
+				<pre>
+					:root{background:orange}
+					html {background:orange;}
+				</pre>
+			</p>
+		</section>
+		<section>
+			<h2>:not</h2>
+			<p>:not选择器称为否定选择器，和jQuery中的:not选择器一模一样，可以选择除某个元素之外的所有元素。</p>
+			<div class="demo-not">
+				<form action="#">
+				  <div>
+				    <label for="name">Text Input:</label>
+				    <input type="text" name="name" id="name" placeholder="John Smith" />
+				  </div>
+				  <div>
+				    <label for="name">Password Input:</label>
+				    <input type="text" name="name" id="name" placeholder="John Smith" />
+				  </div>
+				  <div>
+				    <input type="submit" value="Submit" />
+				  </div>
+				</form> 
+			</div>
+		</section>
+		<section>
+			<h2>:empty</h2>
+			<p>
+				:empty选择器表示的就是空。用来选择没有任何内容的元素，这里没有内容指的是一点内容都没有，哪怕是一个空格。
+			</p>
+			<div class="demo-empty">
+				<p>给空的p元素加个边框</p>
+				<p></p>
+			</div>
+		</section>
+		<section>
+			<h2>:target</h2>
+			<p>
+				:target选择器称为目标选择器，用来匹配文档(页面)的url的某个标志符的目标元素。
+				<br>
+				示例：target元素默认隐藏，触发后相应target显示。与url参数中的hash同步。
+			</p>
+			<div class="demo-target">
+				<h2><a href="#brand">Brand</a></h2>
+				<div class="menuSection" id="brand">
+				  content for Brand
+				</div>
+				<h2><a href="#jake">Jake</a></h2>
+				<div class="menuSection" id="jake">
+				 content for jake
+				</div>
+				<h2><a href="#aron">Aron</a></h2>
+				<div class="menuSection" id="aron">
+				    content for aron
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>:first-child && :last-child</h2>
+			<p>“:first-child”选择器表示的是选择父元素的第一个子元素的元素E。简单点理解就是选择元素中的第一个子元素，记住是子元素，而不是后代元素。</p>
+			<p>“:last-child”选择器与“:first-child”选择器作用类似，不同的是“:last-child”选择器选择的是元素的最后一个子元素。</p>
+			<div class="demo-child">
+				<ul>
+					<li>fist child</li>
+					<li>another child</li>
+					<li>last child</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h2>:nth-child</h2>
+			<p>“:nth-child(n)”选择器用来定位某个父元素的一个或多个特定的子元素。其中“n”是其参数，而且可以是整数值(1,2,3,4)，也可以是表达式(2n+1、-n+5)和关键词(odd、even)，但参数n的起始值始终是1，而不是0。也就是说，参数n的值为0时，选择器将选择不到任何匹配的元素。<br />
+			经验与技巧:当“:nth-child(n)”选择器中的n为一个表达式时，其中n是从0开始计算，当表达式的值为0或小于0的时候，不选择任何匹配的元素。如下表所示：</p>
+			<div class="demo-nth-child">
+				<ul>
+					<li>line 1</li>
+					<li>line 2</li>
+					<li>line 3</li>
+					<li>line 4</li>
+					<li>line 5</li>
+					<li>line 6</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h2>:nth-last-child</h2>
+			<p>:nth-last-child(n)”选择器和前面的“:nth-child(n)”选择器非常的相似，只是这里多了一个“last”，所起的作用和“:nth-child(n)”选择器有所区别，从某父元素的最后一个子元素开始计算，来选择特定的元素。</p>
+			<div class="demo-nth-last-child">
+				<ul>
+					<li>line 1</li>
+					<li>line 2</li>
+					<li>line 3</li>
+					<li>line 4</li>
+					<li>line 5</li>
+					<li>line 6</li>
+				</ul>
+			</div>
+		</section>
+		<section>
+			<h2>:nth-of-type(n)</h2>
+			<p>“:nth-of-type(n)”选择器和“:nth-child(n)”选择器非常类似，不同的是它只计算父元素中指定的某种类型的子元素。当某个元素中的子元素不单单是同一种类型的子元素时，使用“:nth-of-type(n)”选择器来定位于父元素中某种类型的子元素是非常方便和有用的。在“:nth-of-type(n)”选择器中的“n”和“:nth-child(n)”选择器中的“n”参数也一样，可以是具体的整数，也可以是表达式，还可以是关键词。</p>
+			<div class="demo-nth-of-type">
+				<div>我是一个Div元素</div>
+				<p>我是一个段落元素</p>
+				<div>我是一个Div元素</div>
+				<p>我是一个段落</p>
+				<div>我是一个Div元素</div>
+				<p>我是一个段落</p>
+				<div>我是一个Div元素</div>
+				<p>我是一个段落</p>
+				<div>我是一个Div元素</div>
+				<p>我是一个段落</p>
+				<div>我是一个Div元素</div>
+				<p>我是一个段落</p>
+				<div>我是一个Div元素</div>
+				<p>我是一个段落</p>
+				<div>我是一个Div元素</div>
+				<p>我是一个段落</p>
+			</div>
+		</section>
+		<section>
+			<h2>form of :enabled :disabled :read-only :checked</h2>
+			
+			<div class="demo-form">
+				<form action="#">
+				  <div>
+				    <label for="name">Text Input:</label>
+				    <input type="text" name="name" id="name" placeholder="可用输入框"  />
+				  </div>
+				   <div>
+				    <label for="name">Text Input:</label>
+				    <input type="text" name="name" id="name" placeholder="禁用输入框"  disabled="disabled" />
+				  </div>
+				  <div>
+				  	<label for="address">address:</label>
+				  	<input type="text" placeholder="中国上海" readonly>
+				  </div>
+				  <div>
+				  	<div class="radio-box">
+				  		<input type="radio" name="sex" id="boy" value="boy" checked /><b></b>
+				  	</div>				  	
+				  	<label for="boy">boy</label>
+				  </div>
+				  <div>
+				  	<div class="radio-box">
+				  		<input type="radio" name="sex" id="girl" value="girl" /><b></b>
+				  	</div>
+				  	<label for="girl">girl</label>
+				  </div>
+				</form>
+			</div>
+		</section>
+		<section>
+			<h2>::selection</h2>
+			<p>“::selection”伪元素是用来匹配突出显示的文本(用鼠标选择文本时的文本)。浏览器默认情况下，用鼠标选择网页文本是以“深蓝的背景，白色的字体”显示的，效果</p>
+			<div class="demo-selection">
+				选中我
+			</div>
+		</section>
+		<section>
+			<h2>:before && :after</h2>
+			<p>
+				<pre>
+					element:after  { style properties }  /* CSS2 syntax */
+
+					element::after { style properties }  /* CSS3 syntax */
+				</pre>
+			</p>
+			<div class="demo-after">
+				<h3>box shadow with ::after effect</h3>
+			</div>
+		</section>
+	</article>
+</body>
+</html>

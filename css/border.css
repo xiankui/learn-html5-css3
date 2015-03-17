@@ -1,0 +1,77 @@
+.standard-border-radius {
+	width: 100px;
+	height: 100px;
+	background-color: #9da;
+	/** 
+	 * corresponsedence up right down and left
+	 *
+	 * simplified border-radius:30px 10px;
+	**/
+	border-radius: 30px 10px 30px 10px;  
+}
+.circle {
+	width: 100px;
+	height: 100px;
+	background-color: #9da;
+	border-radius: 50px;  /* border-radius: 50%; is a circle */
+}
+.semi-circle-up {
+	width: 100px;
+	height: 50px;
+	background-color: #9da;
+	border-radius: 50px 50px 0 0;
+}
+.semi-circle-right {
+	width: 50px;
+	height: 100px;
+	background-color: #d9a;
+	border-radius: 0 50px 50px 0;
+}
+.semi-circle-down {
+	width: 100px;
+	height: 50px;
+	background-color: #da9;
+	border-radius: 0 0 50px 50px;
+}
+.semi-circle-left {
+	width: 50px;
+	height: 100px;
+	background-color: #a9d;
+	border-radius: 50px 0 0 50px;
+}
+
+/**
+ * box-shadow
+**/
+.box-shadow {
+	width: 100px;
+	height: 100px;
+}
+.box-shadow-outset {
+	box-shadow: 4px 2px 6px #333;
+}
+.box-shadow-inset {
+	box-shadow: 4px 2px 6px #333 inset;
+}
+.box-shadow-mix {
+	box-shadow: 4px 2px 6px #f00,
+			    -4px -2px 6px #000,
+			    0 0 12px 5px #3c0 inset;
+}
+
+/**
+ * border-image
+**/
+.border-image {
+	width: 300px;
+	height: 300px;
+	background-color: #0aa;
+	border: 20px solid #ddd;  /* try change border-width */
+}
+.border-image-repeat {
+	border-image: url(../images/border.jpg) 70 repeat;
+}.border-image-round {
+	border-image: url(../images/border.jpg) 70 round;
+}.border-image-stretch {
+	border-image: url(../images/border.jpg) 70 stretch;
+}

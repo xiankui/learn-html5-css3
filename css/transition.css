@@ -1,0 +1,12 @@
+.demo-transition {
+	width: 300px;
+	height: 200px;
+	margin: 50px auto;
+	background-color: orange;
+	transition: background-color 0.5s ease-in,
+				border-radius 0.5s ease 0.2s;
+}
+.demo-transition:hover {
+	background-color: red;
+	border-radius: 50%;
+}

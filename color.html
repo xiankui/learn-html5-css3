@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>color</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/color.css">
+</head>
+<body>
+	<header>
+		<h1>learn magic of color</h1>
+	</header>
+	<article>
+		<h2>颜色之RGBA:red green blue alpha</h2>
+		<p>background-color: rgba(100, 120, 60, 0.5);</p>
+		<div class="rgba"></div>
+	</article>
+	<hr />
+	<article>
+		<h2>渐变色彩</h2>
+		<section class="gradient linear">
+			<h3>线性渐变</h3>
+			<p>background-image: linear-gradient(to right, #f00, #0f0, #00f);</p>
+			<ul>
+				<li>第一个参数:指定渐变方向，可以用“角度”的关键词或“英文”来表示；默认为180deg</li>
+				<li>第二个和第三个参数，表示颜色的起始点和结束点，可以有多个颜色值。</li>
+			</ul>
+			<div class="linear-gradient"></div>
+		</section>
+		<section class="gradient radial"></section>
+	</article>
+</body>
+</html>

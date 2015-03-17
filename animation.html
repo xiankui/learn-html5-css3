@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>animation</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/animation.css">
+</head>
+<body>
+	<header>
+		<h1>animation</h1>
+		<p>
+			动画结束后将恢复到动画前的状态。
+		</p>
+	</header>
+	<article>
+		<h2>@keyframes: 关键帧</h2>
+		<p>
+			用来定义动画
+			<pre>
+				@keyframes changecolor{
+				  0%{
+				   background: red;
+				  }
+				  100%{
+				    background: green;
+				  }
+				}
+			</pre>
+		</p>
+	</article>
+	<article>
+		<h2>animation: 动画调用</h2>
+		<h3>调用参数</h3>
+		<ul>
+			<li>animation-name: myfun;</li>
+			<li>animation-duration: 1s;</li>
+			<li>animation-timing-function: ease</li>
+			<li>animation-delay: 0.1s</li>
+			<li>animation-iteration-count: 播放次数(infinite: 无限循环)</li>
+			<li>animation-direction: 
+				<ul>
+					<li>normal  默认值</li>
+					<li>alternate  动画播放在第偶数次向前播放，第奇数次向反方向播放。</li>
+				</ul>
+			</li>
+			<li>animation-play-state:
+				<ul>
+					<li>running  默认值</li>
+					<li>paused  动画暂停</li>
+				</ul>
+			</li>
+			<li>animation-fill-mode:  定义在动画开始之前和结束之后发生的操作。
+				<ul>
+					<li>none  默认值，表示动画将按预期进行和结束，在动画完成其最后一帧时，动画会反转到初始帧处</li>
+					<li>forwards  表示动画在结束后继续应用最后的关键帧的位置</li>
+					<li>backwards  会在向元素应用动画样式时迅速应用动画的初始帧</li>
+					<li>both  元素动画同时具有forwards和backwards效果</li>
+				</ul>
+			</li>
+		</ul>
+	</article>
+</body>
+</html>

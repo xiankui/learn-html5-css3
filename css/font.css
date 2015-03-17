@@ -1,0 +1,25 @@
+.text-overflow {
+	width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.word-wrap {
+	width: 300px;
+	word-wrap: break-word;
+}
+
+@font-face {
+    font-family: "MOOC Font";
+    src: url("http://www.imooc.com/Amaranth-BoldItalic.otf");
+}
+.mooc-font {
+	font-family: "MOOC Font";
+	font-size: 16px;
+}
+
+.text-shadow {
+	font-size: 20px;
+	font-weight: 700;
+	text-shadow: 1px 1px 2px #aaa;
+}

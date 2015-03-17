@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>border</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/border.css">
+</head>
+<body>
+	<header>
+		<h1>learn magic of border: the demo of varible borders</h1>
+	</header>
+	<article class="area-border-radius">
+		<h2>the demo of border-radius</h2>
+		<div class="demo-list">
+			<ul>
+				<li>
+					<h3>a standard border-radius</h3>
+					<p>border-radius: 30px 10px;</p>
+					<div class="standard-border-radius"></div>
+				</li>
+				<li>
+					<h3>a circle</h3>
+					<p>border-radius: 50%;</p>
+					<div class="circle"></div>
+				</li>
+				<li>
+					<h3>a semi circle of up</h3>
+					<p>border-radius: 50px 50px 0 0;</p>
+					<div class="semi-circle-up"></div>
+				</li>
+				<li>
+					<h3>a semi circle of right</h3>
+					<p>border-radius: 0 50px 50px 0;</p>
+					<div class="semi-circle-right"></div>
+				</li>
+				<li>
+					<h3>a semi circle of down</h3>
+					<p>border-radius: 0 0 50px 50px;</p>
+					<div class="semi-circle-down"></div>
+				</li>
+				<li>
+					<h3>a semi circle of left</h3>
+					<p>border-radius: 50px 0 0 50px;</p>
+					<div class="semi-circle-left"></div>
+				</li>
+			</ul>
+		</div>
+	</article>
+	<hr />
+	<article class="area-box-shadow">
+		<h2>magic of box-shadow</h2>
+		<p>box-shadow: x轴偏移量 y轴偏移量 【阴影模糊半径】 【阴影扩展半径】 【阴影颜色】 【投影方法】</p>
+		<mark>注意：inset应在最后一个位置。</mark>
+		<section class="demo-list">
+			<ul>
+				<li>
+					<h3>默认投影方法：外阴影</h3>
+					<p>box-shadow-outset: 4px 2px 6px #333;</p>
+					<div class="box-shadow box-shadow-outset"></div>
+				</li>
+				<li>
+					<h3>内阴影</h3>
+					<p>box-shadow-inset: 4px 2px 6px #333 inset;</p>
+					<div class="box-shadow box-shadow-inset"></div>
+				</li>
+				<li>
+					<h3>多阴影</h3>
+					<p>box-shadow-mix: ..., ..., ...;</p>
+					<div class="box-shadow box-shadow-mix"></div>
+				</li>
+			</ul>
+		</section>
+	</article>
+	<hr />
+	<article class="area-border-image">
+		<h2>magic of border-image</h2>
+		<dl>
+			<dt>border-image: url(border.png) 70 70 70 70 repeat</dt>
+			<dd>border.png 为图片路径</dd>
+			<dd>70(px / %) 为切割图片的宽度，遵循顺时针规律</dd>
+			<dd>repeat 为图片延伸方式：repeat (重复); round (平铺); stretch (拉伸);</dd>
+			<dd><mark></mark></dd>
+		</dl>
+		<section class="demo-list">
+			<ul>
+				<li>
+					<h3>the demo of repeat</h3>
+					<p>border-image: url(../images/border.jpg) 70 repeat;</p>
+					<div class="border-image border-image-repeat"></div>
+					<mark>div的四个角分别对应了背景图片的四个角，中间部分重复，且居中开始重复，超出部分被截掉。</mark>
+				</li>
+				<li>
+					<h3>the demo of round</h3>
+					<p>border-image: url(../images/border.jpg) 70 round;</p>
+					<div class="border-image border-image-round"></div>
+					<mark>div的四个角分别对应了背景图片的四个角，中间部分重复，且居中开始重复，为了实现圆满会压缩。</mark>
+				</li>
+				<li>
+					<h3>the demo of stretch</h3>
+					<p>border-image: url(../images/border.jpg) 70 stretch;</p>
+					<div class="border-image border-image-stretch"></div>
+					<mark>div的四个角分别对应了背景图片的四个角，中间部分被拉伸。</mark>
+				</li>
+			</ul>
+		</section>
+	</article>
+</body>
+</html>

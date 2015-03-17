@@ -1,0 +1,208 @@
+<!DOCTYPE html><!-- the doctype declaration tells the browser that this page is written in HTML5 -->
+<!-- Tags are containers. html tag is the root tag -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>html5 tutorial</title>
+		<meta name="description" content="this is a bone of html5 tutorial. learn html5 start here.">
+		<meta name="keyword" content="html5 tutorial seo head title meta">
+		<!--[if lt IE 9]>
+			<script type="text/javascript">
+				(function (doc) {
+					var e = ("article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section,time,audio,video,canvas,mark,template").split(","),
+						i = e.length;
+
+					while (i--) {
+						doc.createElement(e[i]);
+					}
+				})(document);
+			</script>
+			<style type="text/css">
+				/* add the css here */
+				article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section,audio,video,canvas{display:block}
+				mark{background:#FF0;color:#000}
+				template{display:none}
+			</style>
+		<![endif]-->
+		<style type="text/css">
+			header {
+				background-color: #0aa;
+			}
+			nav {
+				float: left;
+				width: 20%;
+			}
+			nav li {
+				margin: 5px 0;
+			}
+			nav a {
+				font-size: 24px;
+			}
+			main {
+				background-color: #efefef;
+				float: left;
+				width: 60%;
+				margin: 0 5%;
+			}
+			.outer-div {
+				padding: 20px;
+				background-color: #efefef;
+				text-align: center;
+			}
+			.inner-div {
+				padding: 20px;
+				background-color: #aaa;
+				color: #fff;
+			}
+			aside {
+				float: left;
+				width: 10%;
+			}
+			footer {
+				background-color: #aa0;
+				clear: both;
+			}
+
+			article {
+				background-color: #fefefe;
+			}
+			section {
+				background-color: #aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>html5 tutorial</h1>
+			<p>a demo of html5 tutorial</p>
+		</header>
+
+		<nav>
+			<ul>
+				<li><a href="border.html">border</a></li>
+				<li><a href="color.html">color</a></li>
+				<li><a href="font.html">font</a></li>
+				<li><a href="background.html">background</a></li>
+				<li><a href="selector.html">selector</a></li>
+				<li><a href="demo-slider.html">demo-slider</a></li>
+				<li><a href="transform.html">transform</a></li>
+				<li><a href="transition.html">transition</a></li>
+				<li><a href="animation.html">animation</a></li>
+				<li><a href="layout.html">layout</a></li>
+				<li><a href="demo-nav.html">demo-nav</a></li>
+				<li><a href="3d-demo.html">3d-demo</a></li>
+				<li><a href="3d-nav.html">3d-nav</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<article>
+				<header>
+					<h2>the article heading</h2>
+				</header>
+				
+				<section>
+					<h3>intro &lt;p&gt;</h3>
+					<p>a paragraph tag</p>
+					<p>
+						two semantic tag:
+						<strong>a strong tag</strong>
+						and
+						<b>a bold text</b>
+					</p>
+				</section>
+
+				<section>
+					<h3>intro &lt;div&gt;</h3>
+					<!-- DIV a generic container for flow content that by itself does not represent anything. -->
+					<div>
+						a div tag is just a generic container for flow content that by itself does not represent anything.
+					</div>
+					<div class="outer-div">
+						This div tag
+						<div class="inner-div">
+							&lt;contains this div tag&gt;
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h3>intro &lt;table&gt;</h3>
+					<!-- table is a great way to lay data out. but negatively affect SEO. Keep it simple! --> 
+					<table cellpadding="5" cellspacing="5" border="1">
+						<tr>
+							<td colspan="2">a colspan cell</td>
+						</tr>
+						<tr>
+							<td>table cell</td>
+							<td>another table cell</td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<h2>intro &lt;form&gt;</h2>
+					<form action="">
+						<fieldset>
+							<section>
+								<h3>datalist</h3>
+								datalist: <input list="fruit-list">
+								<datalist id="fruit-list">
+									<option value="apple" />
+									<option value="orange" />
+									<option value="banana" />
+								</datalist>
+							</section>
+
+							<section>
+								<h3>input</h3>
+								text: <input type="text" placeholder="text" /><br />
+								tel: <input type="tel" /><br />
+								number: <input type="number" /><br />
+								range: <input type="range" />
+							</section>
+						</fieldset>
+					</form>
+				</section>
+
+				<footer>
+					<p>the article footer</p>
+				</footer>
+			</article>
+		</main>
+		<aside>
+			<h2>aside of site</h2>
+			<!-- Unordered list and ordered list -->
+			<ul>
+				<li>Apple</li>
+				<li>Orange</li>
+				<li>Banana</li>
+			</ul>
+			<ol>
+				<li>Breakfast</li>
+				<li>Lunch</li>
+				<li>Dinner</li>
+			</ol>
+			<!-- Definition list -->
+			<dl>
+				<dt>Fruit</dt>
+					<dd>apple</dd>
+					<dd>orange</dd>
+					<dd>banana</dd>
+				<dt>Food</dt>
+					<dd>breakfast</dd>
+					<dd>lunch</dd>
+					<dd>dinner</dd>
+			</dl>
+		</aside>
+		<footer>
+			<p><small>&copy;copyright html5-tutorial.</small></p>
+			<div class="vcard"> by
+			   <address class="author">
+			     <em class="fn"><a title="Posts by Jack Osborne" href="#">Jack Osborne</a></em>
+			   </address> on
+			   <time datetime="2009-11-04" class="published updated">November 4th, 2009</time>
+			 </div>
+		</footer>
+	</body>
+</html>

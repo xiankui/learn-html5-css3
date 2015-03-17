@@ -1,0 +1,152 @@
+
+.clearfix::after {
+	display: block;
+	content: "";
+	line-height: 0;
+	clear: both;
+}
+.unstyled {
+	list-style: none;
+	padding: 0;
+}
+
+
+@font-face {
+    font-family: 'sansationregular';
+    src: url('http://www.w3cplus.com/demo/css3/3DAnimationDropdownMenu/sansation_regular-webfont.eot');
+    src: url('http://www.w3cplus.com/demo/css3/3DAnimationDropdownMenu/sansation_regular-webfont.eot?#iefix') format('http://www.w3cplus.com/demo/css3/3DAnimationDropdownMenu/embedded-opentype'),
+         url('http://www.w3cplus.com/demo/css3/3DAnimationDropdownMenu/sansation_regular-webfont.woff') format('woff'),
+         url('http://www.w3cplus.com/demo/css3/3DAnimationDropdownMenu/sansation_regular-webfont.ttf') format('truetype'),
+         url('http://www.w3cplus.com/demo/css3/3DAnimationDropdownMenu/sansation_regular-webfont.svg#sansationregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	background-color: #edecec;
+}
+
+/* basic menu styles */
+.nav-menu {
+    display: block;
+	background: #74adaa;
+	width:950px;
+	margin: 50px auto 150px;
+}
+.nav-menu > li {
+	display: inline;
+	float: left;
+	border-right: 1px solid #94c0be;
+}
+.nav-menu > li:last-child {
+	border-right: 0;
+}
+.nav-menu a {
+	display: block;
+	font-family: "sansationregular";
+	font-smoothing: antialiased;
+	text-transform: capitalize;
+	font-size: 20px;
+	line-height: 20px;
+	color: #fff;
+	padding: 15px 30px 15px 31px;
+	text-decoration: none;
+	overflow: visible;
+}
+
+
+/* animation domination */
+.three-d {
+  /* 定义3D透视舞台视点 */
+  -webkit-perspective: 200px;
+  -moz-perspective: 200px;
+  -ms-perspective: 200px;
+  -o-perspective: 200px;
+  perspective: 200px; 
+
+  position: relative;
+}
+
+.three-d-box {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+
+	/* 3D视图声明 */
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	/* backface */
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hiddden;
+	/* 物体向后移动25px!!! */
+	-webkit-transform: translateZ(-25px);
+	transform: translateZ(-25px);
+	/* 过度动画 产生3d旋转效果 */
+	-webkit-transition: all .3s ease-out;
+	transition: all .3s ease-out;
+}
+
+.three-d:not(.active):hover .three-d-box,
+.three-d:not(.active):focus .three-d-box {
+	-webkit-transform: translateZ(-25px) rotateX(90deg);
+	transform: translateZ(-25px) rotateX(90deg);
+}
+
+
+.front, .back {
+	/* front back 3D物体的前面与下面 */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 15px 30px 15px 31px;
+	background-color: #74adaa;
+	color: #fff;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+  /*  translateZ(25px) 前后错位相交（非中心垂直相交）,旋转时产生立体推出感觉  */
+.front {
+	-webkit-transform: rotateX(0deg) translateZ(25px);
+	transform: rotateX(0deg) translateZ(25px);
+}
+.back {
+	-webkit-transform: rotateX(-90deg) translateZ(25px);
+	transform: rotateX(-90deg) translateZ(25px);
+	color: #ffe7c4;
+}
+
+.nav-menu li .active .front,
+.nav-menu li .active .banck,
+.nav-menu li a:hover .front,
+.nav-menu li a:hover .back {
+	background-color: #51938f;
+	background-image: linear-gradient(45deg, #478480 25%, transparent 25%, transparent 75%, #478480 75%, #478480);
+	background-size: 5px 5px;
+	background-position: 0 0, 
+						 30px 30px;
+}
+
+
+/*  drop menu  */
+.drop-menu {
+	position: absolute;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+
+	-webkit-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.nav-menu > li:hover > .drop-menu {
+	-webkit-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}

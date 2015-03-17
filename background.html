@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>background</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/background.css">
+</head>
+<body>
+	<header>
+		<h1>learn magic of background</h1>
+	</header>
+	<article>
+		<h2>background-origin</h2>
+		<p>
+			设置元素背景图片的原始起始位置。默认是padding-box
+			<pre>
+				<code>background-origin ： border-box | padding-box | content-box;</code>
+			</pre>
+		</p>
+		<div class="bg-origin bg-origin-border"></div>
+		<div class="bg-origin bg-origin-padding"></div>
+		<div class="bg-origin bg-origin-content"></div>
+	</article>
+	<hr>
+	<article>
+		<h2>background-clip</h2>
+		<p>
+			用来将背景图片做适当的裁剪以适应实际需要。
+			<pre>
+				<code>background-clip ： border-box | padding-box | content-box | no-clip</code>
+			</pre>
+			参数分别表示从边框、或内填充，或者内容区域向外裁剪背景。no-clip表示不裁切，和参数border-box显示同样的效果。backgroud-clip默认值为border-box。
+		</p>
+		<div class="bg-clip bg-clip-border"></div>
+		<div class="bg-clip bg-clip-padding"></div>
+		<div class="bg-clip bg-clip-content"></div>
+	</article>
+	<hr>
+	<article>
+		<h2>background-size</h2>
+		<p>
+			设置背景图片的大小，以长度值或百分比显示，还可以通过cover和contain来对图片进行伸缩。
+			<pre>
+				<code>background-size: auto | <长度值> | <百分比> | cover | contain</code>
+			</pre>
+		</p>
+		<div class="bg-size bg-size-percent"></div>
+		<div class="bg-size bg-size-cover"></div>
+		<div class="bg-size bg-size-contain"></div>
+	</article>
+	<hr>
+	<article>
+		<h2>multiple backgrounds</h2>
+		<p>
+			多重背景，也就是CSS2里background的属性外加origin、clip和size组成的新background的多次叠加，缩写时为用逗号隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。
+			<pre>
+				<code>
+				background ： [background-color] | [background-image] | [background-position][/background-size] | [background-repeat] | [background-attachment] | [background-clip] | [background-origin],...</code>
+			</pre>
+			可以把上面的缩写拆解成以下形式：
+			<pre>
+				<code>
+				background-image:url1,url2,...,urlN;
+				background-repeat : repeat1,repeat2,...,repeatN;
+				backround-position : position1,position2,...,positionN;
+				background-size : size1,size2,...,sizeN;
+				background-attachment : attachment1,attachment2,...,attachmentN;
+				background-clip : clip1,clip2,...,clipN;
+				background-origin : origin1,origin2,...,originN;
+				background-color : color;</code>
+			</pre>
+		</p>
+		<div class="multi-bgs"></div>
+	</article>
+</body>
+</html>

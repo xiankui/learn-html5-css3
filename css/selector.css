@@ -1,0 +1,145 @@
+:root {
+	background-color: #efefef;
+}
+
+.demo-not input:not([type="submit"]) {
+	border: 1px solid #f00;
+}
+
+.demo-empty p:empty {
+	height: 10px;
+	border: 1px solid #0a0;
+}
+
+.demo-target {
+	padding-left: 100px;
+}
+.demo-target div {
+	display: none;
+}
+.demo-target :target {
+	display: block;
+}
+#brand:target {
+	background-color: #aaa;
+	color: #fff;
+}
+#jake:target {
+	background-color: #aaa;
+	color: #a00;
+}
+#aron:target {
+	background-color: #aaa;
+	color: #0a0;
+}
+
+
+.demo-child li:first-child {
+	color: #f00;
+}
+.demo-child li:last-child {
+	color: #00f;
+}
+
+.demo-nth-child li:nth-child(2n) {
+	background-color: green;    /* 偶数行：0 2 4 .. */
+}
+.demo-nth-child li:nth-child(2n+1) {
+	background-color: #aaa;		/* 奇数行：1 3 5 ... */
+}
+
+.demo-nth-last-child li:nth-last-child(4n+1) {
+	background-color: #00f;     /* 倒数：1 5 9 ...*/
+}
+
+
+.demo-nth-of-type p:nth-of-type(2n+1){
+	text-indent: 2em;
+	background-color: #0aa;
+}
+
+.demo-form input[type="text"]:enabled {
+	border: 1px solid #f36;
+	box-shadow: 0 0 5px #f36;
+}
+.demo-form input[type="text"]:disabled {
+	box-shadow: none;
+}
+.demo-form input[type="text"]:read-only {
+	box-shadow: none;
+	color: #333;
+}
+
+.demo-form .radio-box {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background-color: orange;
+	border-radius: 100%;
+	vertical-align: middle;
+	margin: 10px 0;
+	position: relative;
+}
+.demo-form input[type="radio"] {
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 100;   /*  important  */
+}
+.demo-form .radio-box b {
+	display: block;
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -5px 0 0 -5px;
+	z-index: 1;
+	opacity: 0;
+}
+.demo-form input[type="radio"]:checked + b {
+	opacity: 1;
+}
+
+.demo-selection {
+	border: 1px solid #f00;
+	padding: 10px;
+	font-size: 20px;
+}
+.demo-selection::-moz-selection {
+	background-color: orange;
+	color: red;
+}
+.demo-selection::selection {
+	background-color: orange;
+	color: red;
+}
+
+
+.demo-after {
+	width:500px;
+	height: 200px;
+	line-height: 200px;
+	text-align: center;
+	margin: 0 auto;
+	background-color: #fff;
+	font-size: 24px;
+	font-weight: 700;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.3),
+			    0 0 40px rgba(0,0,0,0.1) inset;
+	position: relative;
+}
+.demo-after::before, .demo-after::after {
+	content: "";
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top: 50%;
+	bottom: 0;
+	box-shadow:0 0 20px rgba(0,0,0,0.8);
+	border-radius: 10%;
+	z-index: -1;
+}

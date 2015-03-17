@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+	<header>
+		<h1>learn magic of layout</h1>
+	</header>
+	<article>
+		<h2>多列布局——Columns</h2>
+		<p>
+			<pre>
+				语法：
+				<code>
+					columns：&lt;column-width&gt; || &lt;column-count&gt;
+				</code>
+			</pre>
+		</p>
+		<div>
+			<h3>属性</h3>	
+			<ul>
+				<li>column-width  列宽</li>
+				<li>column-count  列数</li>
+				<li>column-gap  列间距</li>
+				<li>column-rule  列表边框
+					<ul>
+						<li>column-rule-width</li>
+						<li>column-rule-style</li>
+						<li>column-rule-color</li>
+					</ul>
+				</li>
+				<li>column-span  跨列设置</li>
+			</ul>
+		</div>
+		<div class="demo-multi-columns">
+			<h4>multi columns demo</h4>
+			<p>
+				为了能在Web页面中方便实现类似报纸、杂志那种多列排版的布局，W3C特意给CSS3增加了一个多列布局模块（CSS Multi Column Layout Module）。它主要应用在文本的多列布局方面，这种布局在报纸和杂志上都使用了几十年了，但要在Web页面上实现这样的效果还是有相当大的难度，庆幸的是，CSS3的多列布局可以轻松实现。接下来咱们一起学习多列布局相关的知识。
+			</p>
+		</div>
+	</article>
+	<hr>
+	<article>
+		<h2>box-sizing  盒子模型</h2>
+		<div>
+			<pre>
+				box-sizing: content-box | border-box | inherit
+			</pre>
+			<p>
+				在自适应布局当中，在元素基础上添加内距padding，按照标准盒模型解析，往往会将布局撑破，但使用box-sizing的border-box值，可以让你轻松完成。
+			</p>
+			<div class="demo-box-sizing">
+				<div class="box">standard box moudle(content box)</div>
+				<div class="box box-sizing-border">border-box</div>
+			</div>
+		</div>
+	</article>
+	<hr>
+	<article>
+		<h2>Flexbox  伸缩布局盒模型</h2>
+		<div class="demo-flex">
+			<div class="box normal">normal</div>
+			<div class="box flex1">flex1</div>
+			<div class="box flex2">flex2</div>
+		</div>
+	</article>
+</body>
+</html>
